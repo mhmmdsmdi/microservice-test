@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<RootNamespace>FluentPos.Identity.Api</RootNamespace>
+		<AssemblyName>FluentPos.Identity.Api</AssemblyName>
+        <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\..\framework\Infrastructure\FSH.Framework.Infrastructure.csproj" />
+	  <ProjectReference Include="..\Core\Core.csproj" />
+	  <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+	</ItemGroup>
+    <PropertyGroup>
+        <ContainerImageName>fluentpos.identity</ContainerImageName>
+        <ContainerImageTags>1.0.0;latest</ContainerImageTags>
+        <PublishProfile>DefaultContainer</PublishProfile>
+    </PropertyGroup>
+</Project>
